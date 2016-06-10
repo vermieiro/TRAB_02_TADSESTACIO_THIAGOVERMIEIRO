@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cadastro Cliente</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/bootstrap-responsive.css" media="screen">
+		<link rel="stylesheet" href="css/bootstrap.css" media="screen">
+		<link rel="stylesheet" href="css/style.css" media="screen">
+		<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>	
+		<script type="text/javascript" src="js/jquery.mask.js"></script>
+		<script type="text/javascript" src="js/jquery.mask.min.js"></script>
+		<script type="text/javascript" src="js/style.js"></script>
+		<meta charset="UTF-8"/>
+	</head>
+	<body>
+		<form class="form" id ="cadastro" method="post">
+		<div class="container-fluid">
+			<div class="row-fluid form-group">
+					<h3>Cadastro de Cliente</h3>
+				</div>
+			</div>
+			<div class="row span4">
+				<div class="form-group">CPF:*
+					<div class=" input-prepend">
+						<span class="add-on"><i class="icon-search"></i></span>
+						<input class="span3" type="text" id="cpf" maxlength="14" required />
+					</div>
+				</div>
+			</div>
+			<div class="row span8">
+				<div class="form-group">Nome:*
+					<div class="input-prepend">
+						<span class="add-on"><i class="icon-user"></i></span>
+						<input class="span7"type ="text" id="nome" required/>
+					</div>
+				</div>
+			</div>
+			<div class="row span4">
+				<div class="form-group">Estado Civil:*
+					<div class="input-prepend">
+						<span class="add-on"><i class="icon-edit"></i></span>
+						<select  id="ec" required>
+							<option value="">Escolha uma Opção</option>
+							<option value="Solteiro">Solteiro</option>
+							<option value="Casado">Casado</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="row span4">
+				<div class="form-group">Sexo:*
+					<div class="input-prepend">
+						<span class="add-on"><i class="icon-edit"></i></span>
+						<select id="sel" required>
+							<option value="">--- Escolher Sexo ---</option>
+							<option value="Masculino">Masculino</option>
+							<option value="Feminino">Feminino</option>
+						</select>
+					</div>
+				</div>
+			</div>	
+			<div class="row span4">
+	 			<div class="form-group">Telefone:
+					<div class="input-prepend">
+						<span class="add-on"><i class="icon-edit"></i></span>
+						<input class="span3"type ="tel"  id="telefone" maxlength="14" />
+					</div>
+				</div>
+			</div>
+			<div class="row span4">
+				<div class="form-group">CEP:*
+					<div class=" input-prepend">
+						<span class="add-on"><i class="icon-search"></i></span>
+						<input class="span3" type="text"  id="cep"  maxlength="14" required/>
+					</div>
+				</div>
+			</div>
+			<div class="row span8">
+				<div class="form-group">Endereço:
+					<div class="input-prepend">
+						<span class="add-on"><i class="icon-user"></i></span>
+						<input class="span7" type ="text" id="endereco" disabled/>
+					</div>
+				</div>
+			</div>
+			<div class="row span4">
+				<div class="form-group">Bairro:
+					<div class="input-prepend">
+						<span class="add-on"><i class="icon-edit"></i></span>
+						<input class="span3" type ="text" id="bairro" maxlength="14" disabled/>
+					</div>
+				</div>
+			</div>
+			<div class="row span3">
+				<div class="form-group">Estado:
+					<div class="input-prepend">
+						<span class="add-on"><i class="icon-edit"></i></span>
+						<input class="span2" type ="text" id="estado" maxlength="14" disabled/>
+					</div>
+				</div>
+			</div>
+			<div class="row span4">
+				<div class="form-group">Cidade:
+					<div class="input-prepend">
+						<span class="add-on"><i class="icon-edit"></i></span>
+						<input class="span4" type ="text" id="cidade"  maxlength="14" disabled/>
+					</div>
+				</div>
+			</div>
+			<div class="row span8">
+				<div class="form-group">Email(Login):*
+					<div class="input-prepend">
+						<span class="add-on"><i class="icon-envelope"></i></span>
+						<input class="span7" type ="email" id="email" required/>
+					</div>
+				</div>
+			</div>
+			<div class="row span3">
+				<div class="form-group4">Senha:*
+					<div class="input-prepend">
+						<span class="add-on"><i class="icon-lock"></i></span>
+						<input class="span3" type ="password" id="senha" required="required" minlength="6"/>
+					</div>
+				</div>
+			</div>
+			<div class="row span12">
+				<div class="form-group">Obs:
+					<div class="input-prepend">
+						<span class="add-on" style="height:40px"><i class="icon-comment" ></i></span>
+						<textarea type ="text" id="obs" maxlength="200"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="row span4">
+				<div class="form-group">Receber notificações:*
+				<div>
+					<input type="checkbox" id="sim" />
+				</div>
+			</div>
+			</div>
+			<div class="row span12">
+				<span id = "notificacao" style = "display:none">
+					"A qualquer momento você poderá cancelar o recebimento 
+					dos e-mail’s de promoção enviando um e-mail com o assunto 
+					STOP MAIL para o endereço contato@estacio.br." 
+				</span>
+			</div>
+			
+			<div class="row span12">
+				<div class="span3">
+					<input type="submit" class="btn btn-primary" value="Enviar" id="enviar"/>
+				</div>
+				<div class="span3">
+					<input id="cancelar" type="reset" class="btn btn-danger" value="Cancelar" />
+				</div>
+			</div>
+			</div>
+	</form>
+	<br/>
+		<br/>
+		<br/>
+		<table id="resultado" class="table">
+		<thead>
+			<th>CPF</th>
+			<th>Nome</th>
+		</thead>
+		<tbody id="resultados">
+		</tbody>
+	</table>
+</body>
+</html>

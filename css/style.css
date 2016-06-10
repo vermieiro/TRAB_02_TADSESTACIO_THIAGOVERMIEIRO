@@ -1,0 +1,38 @@
+
+#notificacao{
+	border:1px solid black;
+	color:red;
+}
+.table{
+color:white;
+}
+
+textarea {
+    resize: none;
+	max-width:70%;
+	} 
+	html,body{
+	background-color: black;
+	color:white;
+	width:80%;
+	}
+	h3{
+	text-align:center;
+	}
+	.red{
+	color:red;
+	max-width:30%;
+	}
+	@media screen and (min-width: 500px) {
+    html,body {
+		margin: 0 auto;
+		width:80%;
+    }
+	.red{
+	color:red;
+	max-width:100%;
+	}
+	textarea {
+    resize: none;
+	width:100%;
+	} 
